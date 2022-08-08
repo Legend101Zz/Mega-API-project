@@ -1,0 +1,23 @@
+<% layout('layout/boilerplate.ejs') %>
+
+<h2>Title: <%= unit.title %></h2>
+<h2>Description: <%= unit.description %></h2>
+<h2>isPaid: <%= unit.isPaid %></h2>
+<h2>numLessons: <%= unit.numLessons %></h2>
+<h2>tags: <%= unit.tag %></h2>
+
+
+<h2>From course</h2>
+
+
+<footer>
+  <a href="/admin/courses/:id/units/<%=unit._id%>/edit ">Edit</a>
+
+  <a href="/admin/courses">All Courses</a>
+</footer>
+
+<p>  
+    <form action="/admin/courses/:id/units/<%=unit._id%>?_method=DELETE " method="POST"> 
+    <button>Delete</button>
+    </form>
+</p>

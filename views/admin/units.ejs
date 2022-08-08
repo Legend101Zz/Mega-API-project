@@ -1,0 +1,16 @@
+<% layout('layout/boilerplate.ejs') %>
+<h1>Course Units</h1>
+
+<div><a href="/admin/courses/<%=id%>/units/newUnit">Add Unit</a></div>
+
+<ul>
+  <% for (let unit of units){%>
+  <li>
+    <a href="/admin/courses/<%=id%>/units/<%=unit._id%>  "><%= unit.title %></a>
+  </li>
+  <% } %>
+</ul>
+
+<footer>
+  <a href="/admin/courses/<%=id%> ">Back to Course</a>
+</footer>

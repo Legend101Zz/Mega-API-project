@@ -1,0 +1,39 @@
+<% layout('layout/boilerplate.ejs') %>
+
+<h2>Title: <%= course.title %></h2>
+<h2>Description: <%= course.description %></h2>
+<h2>creatorName: <%= course.creatorName %></h2>
+<h2>creatorId: <%= course.creatorId %></h2>
+<h2>coursePrice: <%= course.coursePrice %></h2>
+<h2>avgRating: <%= course.avgRating %></h2>
+<h2>totalReview: <%= course.totalReview %></h2>
+<h2>totalPurchases: <%= course.totalPurchases %></h2>
+<h2>totalArticles: <%= course.totalArticles %></h2>
+<h2>totalLikes: <%= course.totalLikes %></h2>
+<h2>totalResources: <%= course.totalResources %></h2>
+<h2>isPaid: <%= course.isPaid %></h2>
+<h2>totalTests: <%= course.totalTests %></h2>
+
+
+<h2>Units: <ul>
+  <% for(let unit of course.units){ %> 
+
+<li> <%=unit.description%>  </li>
+
+<% } %> 
+
+</ul>
+</h2>
+
+
+<footer>
+  <a href="/admin/courses/<%=course._id%>/edit ">Edit</a>
+
+  <a href="/admin/courses">All Courses</a>
+</footer>
+
+<p>  
+    <form action="/admin/courses/<%=course._id%>?_method=DELETE " method="POST"> 
+    <button>Delete</button>
+    </form>
+</p>

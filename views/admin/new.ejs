@@ -1,0 +1,106 @@
+<% layout('layout/boilerplate.ejs') %>
+
+<div class="row">
+  <h1 class="text-center">New Course</h1>
+  <div class="col-6 offset-3">
+    <form action="/admin/courses" method="POST">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="course[title]" />
+      </div>
+      <br />
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="course[description]"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="creatorName">creatorName</label>
+        <input type="text" id="creatorName" name="course[creatorName]" />
+      </div>
+      <br />
+      <div>
+        <label for="creatorId">CreatorId</label>
+        <input type="number" id="creatorId" name="course[creatorId]" />
+      </div>
+      <br />
+      <div>
+        <label for="coursePrice">coursePrice</label>
+        <input type="number" id="coursePrice" name="course[coursePrice]" />
+      </div>
+      <br />
+
+      <div>
+        <label for="avgRating">avgRating</label>
+        <input type="number" id="avgRating" name="course[avgRating]" />
+      </div>
+      <br />
+      <div>
+        <label for="totalReview">totalReview</label>
+        <input type="text" id="totalReview" name="course[totalReview]" />
+      </div>
+      <br />
+      <div>
+        <label for="totalPurchases">totalPurchases</label>
+        <input type="text" id="totalPurchases" name="course[totalPurchases]" />
+      </div>
+      <br />
+      <div>
+        <label for="totalLikes">totalLikes</label>
+        <input type="text" id="totalLikes" name="course[totalLikes]" />
+      </div>
+      <br />
+      <div>
+        <label for="quote">Quote</label>
+        <input type="quote" id="quote" name="course[quote]" />
+      </div>
+      <br />
+
+      <div>
+        <label for="isPaid">isPaid</label>
+        <input type="text" id="isPaid" name="course[isPaid]" />
+      </div>
+      <br />
+      <div>
+        <label for="totalArticles">totalArticles</label>
+        <input type="text" id="totalArticles" name="course[totalArticles]" />
+      </div>
+      <br />
+
+      <div>
+        <label for="totalVideoLessons"> totalVideoLessons</label>
+        <input
+          type="text"
+          id="totalVideoLessons"
+          name="course[totalVideoLessons]"
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="totalResources"> totalResources</label>
+        <input type="text" id="totalResources" name="course[totalResources]" />
+      </div>
+      <br />
+
+      <div>
+        <label for=" totalTests"> totalTests</label>
+        <input type="text" id=" totalTests" name="course[ totalTests]" />
+      </div>
+      <br />
+
+      <button class="btn btn-success">Add Course</button>
+      <br />
+
+      <br />
+      <footer>
+        <a href="/admin/courses">All Courses</a>
+      </footer>
+    </form>
+  </div>
+</div>

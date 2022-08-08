@@ -1,0 +1,51 @@
+<% layout('layout/boilerplate.ejs') %>
+
+<div class="row">
+  <h1 class="text-center">EditUnit</h1>
+  <div class="col-6 offset-3">
+    <form action="/admin/courses/:id/units/<%=unit._id%>?_method=PUT " method="POST">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="unit[title]" value="<%= unit.title %>"/>
+      </div>
+      <br />
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="unit[description]"
+        > <%=   unit.description%>  </textarea>
+      </div>
+      <br />
+
+      
+      <div>
+        <label for="isPaid">isPaid</label>
+        <input type="text" id="isPaid" name="unit[isPaid]" value="<%= unit.isPaid %>" />
+      </div>
+      <br />
+
+      <div>
+        <label for="numLessons">numLessons</label>
+        <input type="value" id="numLessons" name="unit[numLessons]" value="<%= unit.numLessons %>" />
+      </div>
+      <br />
+      
+       
+      <div
+        <label for="tag">tags</label>
+        <input type="text" id="tag" name="unit[tag]" value="<%= unit.tag %>" />
+      </div>
+      <br />
+
+      <button class="btn btn-success">Update Unit</button>
+      <br />
+      <br />
+      <footer>
+        <a href="/admin/courses/:id/units/<%=unit._id%> ">Back to Courses</a>
+      </footer>
+    </form>
+  </div>
+</div>

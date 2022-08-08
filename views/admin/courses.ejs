@@ -1,0 +1,10 @@
+<% layout('layout/boilerplate.ejs') %>
+<h1>All Courses</h1>
+
+<div class="mb-3"><a href="/admin/courses/new">Add Course</a></div>
+
+<ul>
+  <% for (let course of courses){%>
+  <li><a href="/admin/courses/<%= course._id %>  "><%= course.title %></a></li>
+  <% } %>
+</ul>
