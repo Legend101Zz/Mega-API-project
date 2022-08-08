@@ -1,7 +1,6 @@
 # Mega-API-project
 
-# edtech_backend
-Replace the url with https://quasar-one.herokuapp.com/ to use the apis
+
 
 1. Post Register
 			http://localhost:8080/api/v1/auth/register
