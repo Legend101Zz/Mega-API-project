@@ -85,7 +85,7 @@ app.use((err, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://App_Project:ue76RvCZ23XoXIOB@appcluster.jbd00.mongodb.net/app?retryWrites=true&w=majority"
+    process.env.MONGO_URI
   )
   .then((result) => {
     Course.findOne().then((user) => {
